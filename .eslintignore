@@ -1,0 +1,5 @@
+dist
+docs
+node_modules
+**/src/idl_codegen
+**/src/idl_codegen_jupiter_perps
