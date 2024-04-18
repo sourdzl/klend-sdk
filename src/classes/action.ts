@@ -383,7 +383,8 @@ export class KaminoAction {
     requestElevationGroup: boolean = false,
     includeUserMetadata: boolean = true, // if true it includes user metadata
     referrer: PublicKey = PublicKey.default,
-    currentSlot: number = 0
+    currentSlot: number = 0,
+    payer?: PublicKey
   ) {
     const axn = await KaminoAction.initialize(
       'deposit',
@@ -393,7 +394,9 @@ export class KaminoAction {
       kaminoMarket,
       obligation,
       referrer,
-      currentSlot
+      currentSlot,
+      undefined,
+      payer
     );
     const addInitObligationForFarm = true;
 
@@ -425,7 +428,8 @@ export class KaminoAction {
     includeUserMetadata: boolean = true, // if true it includes user metadata
     referrer: PublicKey = PublicKey.default,
     currentSlot: number = 0,
-    hostAta?: PublicKey
+    hostAta?: PublicKey,
+    payer?: PublicKey
   ) {
     const axn = await KaminoAction.initialize(
       'borrow',
@@ -436,7 +440,8 @@ export class KaminoAction {
       obligation,
       referrer,
       currentSlot,
-      hostAta
+      hostAta,
+      payer
     );
     const addInitObligationForFarm = true;
     if (extraComputeBudget > 0) {
@@ -466,7 +471,8 @@ export class KaminoAction {
     requestElevationGroup: boolean = false,
     includeUserMetadata: boolean = true, // if true it includes user metadata
     referrer: PublicKey = PublicKey.default,
-    currentSlot: number = 0
+    currentSlot: number = 0,
+    payer?: PublicKey
   ) {
     const axn = await KaminoAction.initialize(
       'mint',
@@ -476,7 +482,9 @@ export class KaminoAction {
       kaminoMarket,
       obligation,
       referrer,
-      currentSlot
+      currentSlot,
+      undefined,
+      payer
     );
     const addInitObligationForFarm = true;
 
@@ -506,7 +514,8 @@ export class KaminoAction {
     requestElevationGroup: boolean = false,
     includeUserMetadata: boolean = true, // if true it includes user metadata,
     referrer: PublicKey = PublicKey.default,
-    currentSlot: number = 0
+    currentSlot: number = 0,
+    payer?: PublicKey
   ) {
     const axn = await KaminoAction.initialize(
       'redeem',
@@ -516,7 +525,9 @@ export class KaminoAction {
       kaminoMarket,
       obligation,
       referrer,
-      currentSlot
+      currentSlot,
+      undefined,
+      payer
     );
     const addInitObligationForFarm = true;
 
@@ -546,7 +557,8 @@ export class KaminoAction {
     requestElevationGroup: boolean = false,
     includeUserMetadata: boolean = true, // if true it includes user metadata
     referrer: PublicKey = PublicKey.default,
-    currentSlot: number = 0
+    currentSlot: number = 0,
+    payer?: PublicKey
   ) {
     const axn = await KaminoAction.initialize(
       'depositCollateral',
@@ -556,7 +568,9 @@ export class KaminoAction {
       kaminoMarket,
       obligation,
       referrer,
-      currentSlot
+      currentSlot,
+      undefined,
+      payer
     );
     const addInitObligationForFarm = true;
 
